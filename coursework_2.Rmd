@@ -1,0 +1,80 @@
+---
+title: "coursework_2"
+output: html_document
+---
+
+```{r}
+library("readr")
+```
+
+
+
+
+```{r}
+install.packages("bio3d", dependencies=TRUE)
+```
+
+```{r}
+library(bio3d)
+```
+
+
+```{r}
+library("readr")
+df <- readr::read_csv2("pkas.csv")
+head(df)
+```
+```{r}
+summary(df)
+df[6000000,]
+```
+
+There are 12,628,148 sequences!
+It would be required to obtain the sequences of each, alongside their pKa values.
+
+```{r}
+colnames(df)
+```
+
+```{r}
+library(dplyr)
+newdf <- df %>%
+  filter(idcode == "3epp")
+
+newdf
+```
+```{r}
+uniqueid <- unique(df$idcode)
+length(uniqueid)
+```
+
+121294 total unique proteins
+
+
+
+
+
+---------------------------------------------
+Sequences
+---------------------------------------------
+
+```{r}
+testset <- uniqueid[1:10]
+# data I want to put into PDBe API as a test.
+# argument sake, we will take 10 ids first
+testset
+
+
+```
+
+
+```{r}
+writeLines(testset)
+```
+
+I somehow want to get the testset sequences from PDB, remember to append their chain and residue number?
+
+
+
+
+
