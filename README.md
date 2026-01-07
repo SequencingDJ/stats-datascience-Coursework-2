@@ -7,10 +7,10 @@ The pkas dataset and their sequences have been obtained, from their pdb ids.
 Initially planned to have 10k sequences, we instead have a merged total of 9962 (unique ids).
 The remaining discarded sequences would require additional data cleaning but this was deemed unimportant.
 
-We will therefore use the following ML ratio of:
-Testing:Training
-7:3
-6973:2989
+We will therefore use the following ML ratio of:  
+Testing:Training  
+7:3  
+6973:2989  
 
 
 Next steps: 
