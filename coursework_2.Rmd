@@ -21,12 +21,12 @@ library(bio3d)
 
 ```{r}
 library("readr")
-df <- readr::read_csv2("pkas.csv")
+df <- readr::read_csv2("../pkas.csv")
 head(df)
 ```
 ```{r}
 summary(df)
-df[6000000,]
+df[9999,]
 ```
 
 There are 12,628,148 sequences!
@@ -39,10 +39,12 @@ colnames(df)
 ```{r}
 library(dplyr)
 newdf <- df %>%
-  filter(idcode == "3epp")
+  filter(idcode == c("1atp", "3p5j"))
 
 newdf
 ```
+
+
 ```{r}
 uniqueid <- unique(df$idcode)
 length(uniqueid)
@@ -74,7 +76,56 @@ writeLines(testset)
 
 I somehow want to get the testset sequences from PDB, remember to append their chain and residue number?
 
+```{r}
+first1k <- uniqueid[9001:10000]
+ids <- c(first1k)
+writeLines(ids,"pdb10.txt")
+```
 
 
+```{r}
+df
+```
+# From here, we will be working with the dataframe that is merged:
 
+```{r}
+library("readr")
+df_merged <- read_csv("../merged.csv")
+head(df_merged)
+```
 
+```{r}
+length(df_merged)
+```
+```{r}
+m_uniqueid <- unique(df_merged$idcode)
+length(m_uniqueid)
+```
+
+```{r}
+df_merged[3000:3010,]
+```
+
+```{r}
+merged_df_filtered <- df_merged %>%
+  filter(if_all(everything(), ~ !is.na(.) & . != ""))
+
+```
+
+```{r}
+mergedfiltered_uniqueid <- unique(merged_df_filtered$idcode)
+length(mergedfiltered_uniqueid)
+```
+
+There are 9962 uniqueIDS that aren't empty, due to my incorrect merging. 
+Down from the initial 10k sequences.
+
+We will keep the data ratio as follows
+
+7:3 ratio
+Training:Testing 
+
+Next steps: 
+
+Create 2 DF's, 
+Training and testing data
