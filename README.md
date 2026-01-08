@@ -25,14 +25,14 @@ Next steps:
 
 
 
-Reminder of the criteria for marking:
-• <del>Acquire data
-• <del>Parse data
-• <del>Write a ‘clean’ dataset
-• Make a classifier or a regressor
-• Train it
-• Predict values with it
-• Visualise the results
+Reminder of the criteria for marking:  
+• <del>Acquire data  
+• <del>Parse data  
+• <del>Write a ‘clean’ dataset  
+• Make a classifier or a regressor  
+• Train it  
+• Predict values with it  
+• Visualise the results  
 • Remember code should be commented. 
 
 
