@@ -26,9 +26,9 @@ Next steps:
 
 
 Reminder of the criteria for marking:  
-• ~~Acquire data  
-• ~~Parse data  
-• ~~Write a ‘clean’ dataset  
+• ~~Acquire data~~  
+• ~~Parse data~~  
+• ~~Write a ‘clean’ dataset~~  
 • Make a classifier or a regressor  
 • Train it  
 • Predict values with it  
