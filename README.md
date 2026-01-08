@@ -21,3 +21,21 @@ Next steps:
 - Possible refinement of model.
 
 - Interactive dashboard to visualise results? (stretch goal)
+
+
+
+
+Reminder of the criteria for marking:
+• <del>Acquire data
+• <del>Parse data
+• <del>Write a ‘clean’ dataset
+• Make a classifier or a regressor
+• Train it
+• Predict values with it
+• Visualise the results
+• Remember code should be commented. 
+
+
+
+Specifying positions:
+Will first use one hot encoding to specify positions. Using a windowed frame or slice of the sequence, to then give that to the model. 
