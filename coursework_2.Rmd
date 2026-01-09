@@ -105,6 +105,9 @@ length(m_uniqueid)
 ```{r}
 df_merged[3000:3010,]
 ```
+```{r}
+df_merged[3003,]
+```
 
 ```{r}
 merged_df_filtered <- df_merged %>%
